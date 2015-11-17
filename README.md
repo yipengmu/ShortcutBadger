@@ -1,3 +1,21 @@
+项目介绍:
+
+1.适配 不同厂商的Rom，如果rom本身不支持，则跳过该类launcher.
+
+2.MIUI 默认的mipush-sdk会和自己的notifycation进行消息绑定，所以MIUI保留原生效果
+
+3.调用方式：
+
+`ShortcutBadger.setBadge(context, count);`
+
+`ShortcutBadger.remove(context);`
+
+注意事项：
+
+1.badger为各厂商的launcher的现实逻辑，对于开发者只能通过系统暴漏的接口进行数据层面的传递。
+
+2.另外，badger数不随着应用的卸载而更新，所以默认会在进程被干掉的时候，对badger进行清0
+
 ShortcutBadger: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/me.leolin/ShortcutBadger/badge.svg)](https://maven-badges.herokuapp.com/maven-central/me.leolin/ShortcutBadger)
 ===================================
 
